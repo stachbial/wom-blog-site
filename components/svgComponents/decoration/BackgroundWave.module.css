@@ -1,0 +1,13 @@
+.wave {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  z-index: 0;
+}
+.scaleHeight {
+  height: 100vh;
+  width: auto;
+  display: flex;
+}

@@ -1,0 +1,27 @@
+
+  .SideWave {
+    min-height: 100vh; /*min- prevents the wave to downscale so that it remains to be bg for button   */
+    width: auto;
+    -webkit-filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.25));
+    transition: 0s;
+  }
+
+  @media (max-width: 999px){
+    .SideWave{
+      display: none;
+    }
+  }
+
+  /* .offset {
+    left: -3px;
+  } */
+
+
+
+
+/* .SideWave:hover {
+  -webkit-filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.3));
+} */
+

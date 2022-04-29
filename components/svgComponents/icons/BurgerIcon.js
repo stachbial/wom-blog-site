@@ -1,9 +1,7 @@
-import styles from "./Icon.module.css";
-
-const BurgerIcon = () => {
+const BurgerIcon = ({ dimensions, strokeWidth }) => {
   return (
     <svg
-      className={styles.dimensions}
+      className={dimensions}
       width="50"
       height="50"
       viewBox="0 0 50 50"
@@ -17,7 +15,7 @@ const BurgerIcon = () => {
       <path
         d="M12.5001 16H37.5001M12.5001 25H37.5001M12.5001 34H37.5001"
         stroke="white"
-        strokeWidth="4"
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
       />
     </svg>

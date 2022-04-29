@@ -17,24 +17,29 @@ const NavigationBar = () => {
   };
 
   return (
-    <aside className={`${styles.aside} ${!isMenuShown && styles.hide}`}>
+    <aside
+      className={`${styles.aside} ${!isMenuShown && styles.hide}`}
+      onClick={clickHandler}
+    >
       <nav className={styles.navigation}>
-        {isMenuShown && (
-          <>
-            <Link href="/news">AKTUALNOŚCI</Link>
-            <Link href="/articles">ARTYKUŁY</Link>
-            <Link href="/projects">PROJEKTY</Link>
-            <Link href="/contact">KONTAKT</Link>
-            <Link href="/">O NAS</Link>
-            <BackgroundWave />
-          </>
-        )}
+        <Link href="/aktualnosci">AKTUALNOŚCI</Link>
+        <Link href="/artykuly">ARTYKUŁY</Link>
+        <Link href="/projekty">PROJEKTY</Link>
+        <Link href="/kontakt">KONTAKT</Link>
+        <Link href="/">O NAS</Link>
+        <BackgroundWave />
       </nav>
-
       <div className={styles.waveBar}>
         <SideWave />
-        <Button type='button' onClick={clickHandler} className={styles.button}>
-          {isMenuShown ? <ExitIcon /> : <BurgerIcon />}
+        <Button type="button" className={styles.button}>
+          {isMenuShown ? (
+            <ExitIcon dimensions={styles.iconDimensions} strokeWidth="0.2rem" />
+          ) : (
+            <BurgerIcon
+              dimensions={styles.iconDimensions}
+              strokeWidth="0.2rem"
+            />
+          )}
         </Button>
       </div>
     </aside>

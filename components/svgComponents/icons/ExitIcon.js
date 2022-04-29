@@ -1,9 +1,7 @@
-import styles from "./Icon.module.css";
-
-const ExitIcon = () => {
+const ExitIcon = ({ dimensions, strokeWidth }) => {
   return (
     <svg
-      className={styles.dimensions}
+      className={dimensions}
       width="50"
       height="50"
       viewBox="0 0 50 50"
@@ -17,7 +15,7 @@ const ExitIcon = () => {
       <path
         d="M13 12L38 38M38 12L13 38L38 12Z"
         stroke="white"
-        strokeWidth="4"
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

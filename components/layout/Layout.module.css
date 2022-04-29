@@ -1,10 +1,18 @@
 .container {
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-/* side wave styles */
+@media (min-width: 999px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/* side wave styles =============================*/
 .rotate {
   transform: scaleX(-1) scaleY(-1);
   right: 0px;
@@ -16,11 +24,4 @@
   top: 0px;
   right: 0px;
 }
-
-@media (max-width: 999px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
+/* ============================================== */

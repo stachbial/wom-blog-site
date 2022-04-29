@@ -7,16 +7,12 @@
     transition: 0s;
   }
 
-  @media (max-width: 999px){
+  /* can not use global vars in here?! (wh?)*/
+  @media (max-width: 1000px){
     .SideWave{
       display: none;
     }
   }
-
-  /* .offset {
-    left: -3px;
-  } */
-
 
 
 

@@ -1,7 +1,149 @@
+/* mobile */
+
+.aside {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  height: var(--mobile-menu-height);
+  width: 100%;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease;
+}
+.hide {
+  top: calc(var(--mobile-menu-barHeight) - var(--mobile-menu-height));
+}
+
+.navigation {
+  position: relative;
+  margin: 0;
+  border: 0;
+  padding-bottom: var(--mobile-menu-barHeight);
+  height: 100%;
+  width: 100%;
+  background-color: var(--menu-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: inherit;
+  border-radius: 0px 0px 10px 10px;
+}
+.navigation a {
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  padding-left: calc(var(--mobile-menu-btn-size) + var(--mobile-menu-btn-gap));
+  text-decoration: none;
+  color: white;
+  font-family: Lato;
+  font-style: bold;
+  font-weight: 400;
+  font-size: var(--mobile-menu-fontSize);
+  line-height: 3.25rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.waveBar {
+  margin: 0;
+  position: relative;
+  /* background-color: var(--menu-color); */
+  /* height: var(--mobile-menu-barHeight); */
+}
+.button {
+  position: fixed;
+  z-index: 3;
+  border: 0;
+  padding: 0;
+  top: var(--mobile-menu-btn-gap);
+  left: var(--mobile-menu-btn-gap);
+  width: var(--mobile-menu-btn-size);
+  height: var(--mobile-menu-btn-size);
+  background-color: black;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border-radius: 17%;
+}
+.iconDimensions {
+  width: var(--mobile-menu-btn-size);
+  height: var(--mobile-menu-btn-size);
+}
+
+/* hover effects ===*/
+.navigation a:hover {
+  font-weight: 700;
+}
+
+/* link underline */
+.navigation a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40%;
+  height: 1px;
+  margin-left: calc(var(--mobile-menu-btn-size) + var(--mobile-menu-btn-gap));
+  bottom: 2px;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: 0.3s ease-in;
+}
+
+.navigation a:hover::before {
+  transform: scaleX(1);
+}
+
+/* for horizontal mobile view */
+@media (max-height: 400px) {
+  .navigation a {
+    line-height: 2.3rem;
+  }
+}
+
 /* desktop */
 
+@media (min-width: 1000px) {
+  .aside {
+    height: 100vh;
+    width: 30%;
+    min-width: 240px;
+    display: flex;
+    flex-direction: row;
+  }
+  .hide {
+    top: 0px;
+    left: calc(-25% * 0.6);
+  }
+
+  .navigation {
+    height: 100%;
+    width: var(--desktop-menu-navWidth);
+    background-color: var(--menu-color);
+    padding-top: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  
+  .navigation a {
+  }
+
+  .button {
+    position: absolute;
+    top: 2.5rem;
+    left: 1.5rem;
+  }
+}
+
+/* === */
+
+/* ================================================================================================================ */
 /* container */
-.aside {
+/* .aside {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -9,22 +151,22 @@
   width: 25%;
   display: flex;
   transition: 0.4s ease;
-}
+} */
 /* .aside.hide:hover {
   left: calc(-25% * 0.6 + 20px);
 } */
 /* link container */
-.navigation {
+/* .navigation {
   position: relative;
-  width: 60%; /*100% */
+  width: 60%; 
   background-color: black;
   padding-top: 50vh;
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* links */
-.navigation a {
+/* .navigation a {
   z-index: 1;
   position: relative;
   padding-left: 40px;
@@ -37,113 +179,42 @@
   line-height: 42px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-}
-.navigation a:hover {
-  font-weight: 700;
-}
-
-/* link underline */
-.navigation a::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40%;
-  height: 1px;
-  margin-left: 40px;
-  bottom: 2px;
-  left: 0;
-  background-color: white;
-  transform: scaleX(0);
-  transition: 0.3s ease-in;
-}
-
-.navigation a:hover::before {
-  transform: scaleX(1);
-}
+} */
 
 /* menu wave edge */
-.waveBar {
+/* .waveBar {
   position: relative;
-}
+} */
 
 /* button positioning */
-.button {
-  /* initially the button rendered with padding,margin anf border down-sizing the svg icon dimensions */
+/* initially the button rendered with padding,margin anf border down-sizing the svg icon dimensions */
+/* .button {
   position: absolute;
   top: 50px;
-  width: 50px;
-  height: 50px;
+  width: auto;
+  height: auto;
   display: flex;
   padding: 0px;
-  margin-left: 20px;
+  
   border: 0px;
   background-color: black;
   transition: 0.4s ease;
   cursor: pointer;
   border-radius: 17%;
-}
+} */
+/* .iconDimensions {
+  width: 4rem;
+  height: auto;
+} */
+
 /* .button:hover {
   box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 1);
 } */
 
 /* offsetting the menu */
-.hide {
+/* .hide {
   left: calc(-25% * 0.6);
-}
+} */
+/* 0.6(60%) is the width of the aside and 25% of it is the width of nav - moving left by the length of nav */
 
 /* mobile */
-@media (max-width: 999px) {
-  .aside {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 75vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    transition: 0.4s ease;
-  }
-  .hide {
-    top: calc(-75vh * 0.85); /* hide 85% of the  menu */
-  }
-  .navigation {
-    position: relative;
-    width: 100%; /*100% */
-    background-color: black;
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    padding-top: calc(75vh * 0.35);
-  }
-  .navigation a {
-    z-index: 1;
-    position: relative;
-    padding-left: 40px;
-    text-decoration: none;
-    color: white;
-    font-family: Lato;
-    font-style: bold;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 45px;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-  }
-  .waveBar {
-    position: fixed;
-    z-index: 3;
-    top: 0px;
-    left: 0px;
-  }
-  .button {
-    /* initially the button rendered with padding,margin anf border down-sizing the svg icon dimensions */
-    top: 25px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    transition: 0.4s ease;
-    cursor: pointer;
-    border-radius: 17%;
-  }
-}

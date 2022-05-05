@@ -1,25 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+/* mobile view */
 :root {
   --bg-color: #e9ecef;
   --menu-color: #000000;
+  --menu-font-color: white;
 
-  --desktop-breakpoint: 1000px;
-  --tablet-width: 600px;
+  /* --desktop-breakpoint: 1000px;
+  --tablet-width: 600px; */
 
+  --menu-height: 75vh;
+  --menu-width: 100%;
+  --menu-nav-width: 100%;
+  --menu-height-btnBar: 5rem;
+  --menu-btn-size: 3rem;
+  --menu-btn-gap: 1rem;
+  --menu-font-size: 20px;
 
-  --mobile-menu-height: 75vh;
-  --mobile-menu-barHeight: 5rem;
-  --mobile-menu-btn-size: 3rem;
-  --mobile-menu-btn-gap: 1rem;
-  --mobile-menu-fontSize: 20px;
-  --mobile-font-body: 16px;
-  --mobile-h1-size: 20px;
-
-
-  --desktop-menu-width: 25%;
-  --desktop-menu-navWidth: 60%;
+  --page-content-width: 100%;
+  --page-content-font-size: 16px;
+  --page-h1-size: 30px;
 }
 
+/* mobile horizontal view */
+@media (max-height: 400px) {
+  :root {
+    --menu-btn-gap: 1rem;
+    --menu-height-btnBar: 4rem;
+    --menu-btn-size: 2rem;
+  }
+}
+
+/* desktop view */
+@media (min-width: 1000px) {
+  :root {
+    --menu-height: 100vh;
+    --menu-width: 30%;
+    --menu-nav-width: 60%;
+    --menu-height-btnBar: 1.4rem;
+    --page-content-width: 80%;
+    --page-content-font-size: 18px;
+    --page-h1-size: 30px;
+  }
+}
 html,
 body {
   padding: 0;

@@ -1,0 +1,16 @@
+.pageContainer {
+  height: 100%;
+  width: var(--page-content-width);
+  padding: 1rem;
+  padding-top: var(--menu-height-btnBar);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pageContainer h1 {
+  font-weight: 900;
+  font-size: var(--page-h1-size);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}

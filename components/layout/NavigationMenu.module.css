@@ -1,74 +1,79 @@
 /* mobile */
 
 .aside {
-  position: absolute;
-  z-index: 1;
+  height: var(--menu-height);
+  width: var(--menu-width);
+  min-width: 240px;
+  position: fixed;
   top: 0px;
   left: 0px;
-  height: var(--mobile-menu-height);
-  width: 100%;
-  min-width: 240px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
   transition: 0.4s ease;
 }
 .hide {
-  top: calc(var(--mobile-menu-barHeight) - var(--mobile-menu-height));
+  top: calc(var(--menu-height-btnBar) - var(--menu-height));
 }
 
 .navigation {
-  position: relative;
+  background-color: var(--menu-color);
+  height: 100%;
+  width: var(--menu-nav-width);
+  position: absolute;
   margin: 0;
   border: 0;
-  padding-bottom: var(--mobile-menu-barHeight);
-  height: 100%;
-  width: 100%;
-  background-color: var(--menu-color);
+  padding-bottom: var(--menu-height-btnBar);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: inherit;
+  transition: none;
   border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+  /* -webkit-box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25); */
+  /* -moz-box-shadow: 
+  note: position the links in the middle(higher) of the menu for longer phones
+  */
+  /* box-shadow: none; */
 }
 .navigation a {
-  z-index: 2;
+  color: var(--menu-font-color);
   position: relative;
   margin: 0;
-  padding-left: calc(var(--mobile-menu-btn-size) + var(--mobile-menu-btn-gap));
-  text-decoration: none;
-  color: white;
+  padding-left: calc(var(--menu-btn-size) + var(--menu-btn-gap));
   font-family: Lato;
+  font-size: var(--menu-font-size);
   font-style: bold;
   font-weight: 400;
-  font-size: var(--mobile-menu-fontSize);
   line-height: 3.25rem;
   letter-spacing: 0.2rem;
+  text-decoration: none;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .waveBar {
-  margin: 0;
   position: relative;
-  /* background-color: var(--menu-color); */
-  /* height: var(--mobile-menu-barHeight); */
+  margin-left: -1px;
+  left: var(--menu-nav-width);
 }
 .button {
+  background-color: black;
+  height: var(--menu-btn-size);
+  width: var(--menu-btn-size);
   position: fixed;
-  z-index: 3;
+  top: var(--menu-btn-gap);
+  left: var(--menu-btn-gap);
   border: 0;
   padding: 0;
-  top: var(--mobile-menu-btn-gap);
-  left: var(--mobile-menu-btn-gap);
-  width: var(--mobile-menu-btn-size);
-  height: var(--mobile-menu-btn-size);
-  background-color: black;
-  transition: 0.4s ease;
+  z-index: 3;
   cursor: pointer;
+  transition: 0.4s ease;
   border-radius: 17%;
 }
 .iconDimensions {
-  width: var(--mobile-menu-btn-size);
-  height: var(--mobile-menu-btn-size);
+  width: var(--menu-btn-size);
+  height: var(--menu-btn-size);
 }
 
 /* hover effects ===*/
@@ -78,17 +83,17 @@
 
 /* link underline */
 .navigation a::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40%;
+  background-color: var(--menu-font-color);
   height: 1px;
-  margin-left: calc(var(--mobile-menu-btn-size) + var(--mobile-menu-btn-gap));
-  bottom: 2px;
+  width: 40%;
+  position: absolute;
   left: 0;
-  background-color: white;
-  transform: scaleX(0);
+  bottom: 2px;
+  margin-left: calc(var(--menu-btn-size) + var(--menu-btn-gap));
+  content: "";
+  display: block;
   transition: 0.3s ease-in;
+  transform: scaleX(0);
 }
 
 .navigation a:hover::before {
@@ -99,37 +104,41 @@
 @media (max-height: 400px) {
   .navigation a {
     line-height: 2.3rem;
+    margin-left: calc(var(--menu-btn-size) + 1rem);
   }
 }
 
 /* desktop */
 
+/* edge case when links stick out on hide bc of % menu width*/
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .aside.hide a {
+    display: none;
+  }
+}
+
 @media (min-width: 1000px) {
   .aside {
-    height: 100vh;
-    width: 30%;
-    min-width: 240px;
-    display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    max-width: 666px;
   }
   .hide {
     top: 0px;
-    left: calc(-25% * 0.6);
+    left: calc(var(--menu-width) * -0.6);
   }
 
   .navigation {
-    height: 100%;
-    width: var(--desktop-menu-navWidth);
-    background-color: var(--menu-color);
+    min-height: 360px;
+    /* min-width: fit-content; */
+    max-width: 400px;
     padding-top: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 0px 0px 0px 0px;
-  }
-
-  
-  .navigation a {
+    transition: none;
+    box-shadow: none;
   }
 
   .button {

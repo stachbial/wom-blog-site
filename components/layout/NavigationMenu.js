@@ -4,12 +4,12 @@ import Link from "next/link";
 import ExitIcon from "../svgComponents/icons/ExitIcon";
 import BurgerIcon from "../svgComponents/icons/BurgerIcon";
 import Button from "./utilities/Button";
-import SideWave from "../svgComponents/decoration/SideWave";
-import BackgroundWave from "../svgComponents/decoration/BackgroundWave";
+import DecorationWave from "../svgComponents/decoration/DecorationWave";
+import DecorationBGwave from "../svgComponents/decoration/DecorationBGwave";
 
-import styles from "./NavigationBar.module.css";
+import styles from "./NavigationMenu.module.css";
 
-const NavigationBar = () => {
+const NavigationMenu = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
 
   const clickHandler = () => {
@@ -27,10 +27,10 @@ const NavigationBar = () => {
         <Link href="/projekty">PROJEKTY</Link>
         <Link href="/kontakt">KONTAKT</Link>
         <Link href="/">O NAS</Link>
-        <BackgroundWave />
+        <DecorationBGwave />
       </nav>
       <div className={styles.waveBar}>
-        <SideWave />
+        <DecorationWave />
         <Button type="button" className={styles.button}>
           {isMenuShown ? (
             <ExitIcon dimensions={styles.iconDimensions} strokeWidth="0.2rem" />
@@ -46,4 +46,4 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+export default NavigationMenu;

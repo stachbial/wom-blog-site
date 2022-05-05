@@ -1,16 +1,18 @@
 import React from "react";
 
-import NavigationBar from "./NavigationBar";
+import NavigationMenu from "./NavigationMenu";
+import DecorationWave from "../svgComponents/decoration/DecorationWave";
 
 import styles from "./Layout.module.css";
-import SideWave from "../svgComponents/decoration/SideWave";
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
-    <div className={styles.container}>
-      <NavigationBar />
+    <section className={styles.container}>
+      <NavigationMenu />
       {children}
-      <SideWave className={styles.sideWave} translate={styles.rotate} />
-    </div>
+      <DecorationWave className={styles.sideWave} translate={styles.rotate} />
+    </section>
   );
-}
+};
+
+export default Layout;

@@ -1,6 +1,6 @@
-import styles from "./BackgroundWave.module.css";
+import styles from "./DecorationBGwave.module.css";
 
-const BGwave = () => {
+const DecorationBGwave = () => {
   return (
     <svg
       className={styles.wave}
@@ -19,4 +19,4 @@ const BGwave = () => {
   );
 };
 
-export default BGwave;
+export default DecorationBGwave;

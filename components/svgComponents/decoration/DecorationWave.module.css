@@ -1,23 +1,16 @@
+.SideWave {
+  display: none;
+}
 
+/* desktop */
+@media (min-width: 1000px) {
   .SideWave {
     min-height: 100vh; /*min- prevents the wave to downscale so that it remains to be bg for button   */
     width: auto;
+    /* max-width: 200px; */
+    display: block;
     -webkit-filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.25));
     filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.25));
     transition: 0s;
   }
-
-  /* can not use global vars in here?! (wh?)*/
-  @media (max-width: 1000px){
-    .SideWave{
-      display: none;
-    }
-  }
-
-
-
-/* .SideWave:hover {
-  -webkit-filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.3));
-} */
-
+}

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -22,8 +23,10 @@ const NavigationMenu = () => {
       onClick={clickHandler}
     >
       <nav className={styles.navigation}>
-        <Link href="/aktualnosci">AKTUALNOŚCI</Link>
-        <Link href="/artykuly">ARTYKUŁY</Link>
+        {/* <Link href="/aktualnosci">AKTUALNOŚCI</Link>
+        <Link href="/artykuly">ARTYKUŁY</Link> */}
+        <p className={styles.disabled}>AKTUALNOŚCI</p>
+        <p className={styles.disabled}>ARTYKUŁY</p>
         <Link href="/projekty">PROJEKTY</Link>
         <Link href="/kontakt">KONTAKT</Link>
         <Link href="/">O NAS</Link>
@@ -33,11 +36,11 @@ const NavigationMenu = () => {
         <DecorationWave />
         <Button type="button" className={styles.button}>
           {isMenuShown ? (
-            <ExitIcon dimensions={styles.iconDimensions} strokeWidth="0.2rem" />
+            <ExitIcon dimensions={styles.iconDimensions} strokeWidth="0.1rem" />
           ) : (
             <BurgerIcon
               dimensions={styles.iconDimensions}
-              strokeWidth="0.2rem"
+              strokeWidth="0.1rem"
             />
           )}
         </Button>

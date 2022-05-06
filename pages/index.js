@@ -10,7 +10,6 @@ import Card from "../components/layout/utilities/Card";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ frontmatter, content }) {
-  console.log("render");
   return (
     <PageContainer>
       <header>
@@ -18,7 +17,7 @@ export default function Home({ frontmatter, content }) {
       </header>
       <Card>
         <img
-          src={frontmatter.cover_image}
+          src={frontmatter.coverImage}
           style={{ width: "100%" }}
           alt="Zdjecie grupowe czlonkow stowarzyszenia"
         />

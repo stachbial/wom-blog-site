@@ -6,15 +6,14 @@ import { marked } from "marked";
 
 import PageContainer from "../components/layout/PageContainer";
 import Card from "../components/layout/utilities/Card";
+import Header from "../components/layout/utilities/Header";
 
-import styles from "../styles/Home.module.css";
+import styles from "../pageStyles/Home.module.css";
 
 export default function Home({ frontmatter, content }) {
   return (
     <PageContainer>
-      <header>
-        <h1>{frontmatter.title}</h1>
-      </header>
+      <Header>{frontmatter.title}</Header>
       <Card>
         <img
           src={frontmatter.coverImage}

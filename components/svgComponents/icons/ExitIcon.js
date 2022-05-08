@@ -1,3 +1,5 @@
+import React from "react";
+
 const ExitIcon = ({ dimensions, strokeWidth }) => {
   return (
     <svg

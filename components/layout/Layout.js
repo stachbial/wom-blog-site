@@ -1,7 +1,7 @@
 import React from "react";
 
 import NavigationMenu from "./NavigationMenu";
-import DecorationWave from "../svgComponents/decoration/DecorationWave";
+import DecorationLayoutWave from "../svgComponents/decoration/mainLayout/DecorationLayoutWave";
 
 import styles from "./Layout.module.css";
 
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <section className={styles.container}>
       <NavigationMenu />
       {children}
-      <DecorationWave className={styles.sideWave} translate={styles.rotate} />
+      <DecorationLayoutWave translate={styles.rotate} color="black" />
     </section>
   );
 };

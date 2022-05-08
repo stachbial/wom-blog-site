@@ -5,18 +5,15 @@ import path from "path";
 import matter from "gray-matter";
 
 import PageContainer from "../components/layout/PageContainer";
+import Header from "../components/layout/utilities/Header";
 import ProjectCard from "../components/ProjectCard";
 
-import styles from "../styles/ProjectsListPage.module.css";
+import styles from "../pageStyles/ProjectsListPage.module.css";
 
 export default function ProjectsListPage({ projectFiles }) {
-  //   console.log(projectFiles);
-
   return (
     <PageContainer>
-      <header>
-        <h1>PROJEKTY</h1>
-      </header>
+      <Header>PROJEKTY</Header>
       <ul className={styles.projectsList}>
         {projectFiles.map((project) => {
           return (
@@ -33,6 +30,7 @@ export async function getStaticProps() {
   //creating an array of the files in a given dir
   const files = fs.readdirSync(path.join("source-texts/projects"));
 
+  // console.log(files)
   //getting slug and frontmatter from every file
   const projectFiles = files.map((filename) => {
     //get frontmatter

@@ -1,3 +1,5 @@
+import React from "react";
+
 const BurgerIcon = ({ dimensions, strokeWidth }) => {
   return (
     <svg

@@ -1,0 +1,17 @@
+.button {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.button:focus-within {
+  background: none;
+  border: none;
+  margin: 0;
+}

@@ -1,0 +1,8 @@
+.header h1 {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 25px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}

@@ -3,6 +3,15 @@
   justify-content: space-evenly;
   flex-direction: column;
 }
+/* side wave styles =============================*/
+.rotate {
+  position: fixed;
+  transform: scaleX(-1) scaleY(-1);
+  right: 0px;
+  top: 0px;
+}
+
+/* ============================================== */
 
 /* desktop */
 @media (min-width: 1000px) {
@@ -12,17 +21,3 @@
     justify-content: space-evenly;
   }
 }
-
-/* side wave styles =============================*/
-.rotate {
-  transform: scaleX(-1) scaleY(-1);
-  right: 0px;
-  top: 0px;
-}
-
-.sideWave {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-}
-/* ============================================== */

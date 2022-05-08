@@ -7,10 +7,3 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-
-.pageContainer h1 {
-  font-weight: 900;
-  font-size: var(--page-h1-size);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}

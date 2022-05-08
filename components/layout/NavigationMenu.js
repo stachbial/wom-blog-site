@@ -5,8 +5,8 @@ import Link from "next/link";
 import ExitIcon from "../svgComponents/icons/ExitIcon";
 import BurgerIcon from "../svgComponents/icons/BurgerIcon";
 import Button from "./utilities/Button";
-import DecorationWave from "../svgComponents/decoration/DecorationWave";
-import DecorationBGwave from "../svgComponents/decoration/DecorationBGwave";
+import DecorationLayoutWave from "../svgComponents/decoration/mainLayout/DecorationLayoutWave";
+import DecorationBGwave from "../svgComponents/decoration/menu/DecorationBGwave";
 
 import styles from "./NavigationMenu.module.css";
 
@@ -33,8 +33,8 @@ const NavigationMenu = () => {
         <DecorationBGwave />
       </nav>
       <div className={styles.waveBar}>
-        <DecorationWave />
-        <Button type="button" className={styles.button}>
+        <DecorationLayoutWave color="black" />
+        <button type="button" className={styles.button}>
           {isMenuShown ? (
             <ExitIcon dimensions={styles.iconDimensions} strokeWidth="0.1rem" />
           ) : (
@@ -43,7 +43,7 @@ const NavigationMenu = () => {
               strokeWidth="0.1rem"
             />
           )}
-        </Button>
+        </button>
       </div>
     </aside>
   );

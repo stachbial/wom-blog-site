@@ -1,0 +1,15 @@
+.SideWave {
+  display: none;
+}
+
+/* desktop */
+@media (min-width: 1000px) and (orientation: landscape) {
+  .SideWave {
+    -webkit-filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(20px 0px 4px rgba(0, 0, 0, 0.25));
+    transition: 0s;
+    min-height: 100vh;
+    width: auto;
+    display: block;
+  }
+}

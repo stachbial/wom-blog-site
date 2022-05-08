@@ -1,6 +1,14 @@
-const Button = ({ type, onClick, className, children }) => {
+import React from "react";
+
+const Button = ({ onClick, className, children }) => {
+  const clickHandler = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    onClick();
+  };
+
   return (
-    <button type={type} onClick={onClick} className={className}>
+    <button type="button" onClick={clickHandler} className={className}>
       {children}
     </button>
   );

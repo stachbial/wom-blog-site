@@ -7,3 +7,6 @@ The whole content is stored on serverside and managed based on the frontmatter d
 All images are private.
 
 This is my first project on such scale.
+
+current build of the project is hosted on:
+https://wom-blog-site.vercel.app/

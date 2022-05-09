@@ -19,7 +19,7 @@ export default function Home({ frontmatter, content }) {
         <div className={styles.imgContainer}>
           <img
             src={frontmatter.coverImage}
-            style={{ width: "100%" }}
+            className={styles.img}
             alt="Zdjecie grupowe czlonkow stowarzyszenia"
           />
           <DecorationHorizontalWave className={styles.wave} color="white" />

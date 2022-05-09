@@ -1,9 +1,10 @@
 import styles from "./DecorationLayoutWave.module.css";
 
-const DecorationLayoutWave = ({ className, translate, color }) => {
+const DecorationLayoutWave = ({ className, translate, color, onClick }) => {
   return (
     <svg
       className={`${styles.SideWave} ${className} ${translate}`}
+      onClick={onClick}
       width="100"
       height="772"
       viewBox="0 0 100 772"

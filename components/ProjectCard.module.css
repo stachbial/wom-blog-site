@@ -6,7 +6,21 @@
   margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
+  transform: translateY(-40vh);
+  opacity: 0;
+  animation: var(--animation-showup-vertical) 0.6s ease-out forwards;
 }
+
+/* @keyframes showup-down {
+  90% {
+    opacity: 60%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+} */
+
 .coverImage {
   position: absolute;
   width: 100%;

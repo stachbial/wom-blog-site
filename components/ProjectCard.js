@@ -5,11 +5,11 @@ import Card from "./layout/utilities/Card";
 
 import styles from "./ProjectCard.module.css";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, key }) => {
   //   console.log(project.frontmatter.logo);
   return (
     <Link href={`/projekty/${project.slug}`}>
-      <li>
+      <li key={key}>
         <Card className={styles.card}>
           <img
             src={project.frontmatter.coverImage}

@@ -4,6 +4,9 @@
   align-items: center;
   min-width: 230px;
   --icon-size: 40px;
+  opacity: 0;
+  transform: translateY(-100vh);
+  animation: var(--animation-showup-vertical) 0.6s ease-out forwards;
 }
 
 .logo {

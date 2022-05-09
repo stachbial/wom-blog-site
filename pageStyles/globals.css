@@ -20,6 +20,36 @@
   --page-content-width: 100%;
   --page-content-padding: 1.5rem;
   --page-content-font-size: 16px;
+
+  --animation-showup-vertical: showup-vertical;
+  --animation-horizontal: showup-horizontal;
+}
+
+@keyframes showup-vertical {
+  /* used this for the animated elements: 
+  opacity: 0;
+  transform: translateY(-100vh);
+  animation: var(--animation-showup-vertical) 0.6s ease-out forwards;
+  */
+  50% {
+    opacity: 60%;
+  }
+  100% {
+    /* position: absolute; */
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes showup-horizontal {
+  90% {
+    opacity: 60%;
+  }
+  100% {
+    /* position: absolute; */
+    transform: translateX(0);
+    opacity: 100%;
+  }
 }
 
 /* mobile horizontal view */
@@ -31,8 +61,8 @@
   }
 }
 
-@media (min-height:700px) and (orientation: portrait){
-  :root{
+@media (min-height: 700px) and (orientation: portrait) {
+  :root {
     --menu-height: 65vh;
   }
 }
@@ -49,6 +79,7 @@
     --page-h1-size: 30px;
   }
 }
+
 html,
 body {
   padding: 0;

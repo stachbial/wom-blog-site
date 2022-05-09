@@ -1,0 +1,24 @@
+.footer {
+  --footer-color: #c1c1c1;
+  position: relative;
+  color: var(--footer-color);
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.footer a {
+  color: var(--footer-color);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 300px) {
+  .footer {
+    flex-direction: column;
+  }
+}

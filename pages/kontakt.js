@@ -14,7 +14,11 @@ export default function ContactPage() {
     <PageContainer>
       <Header>KONTAKT</Header>
       <Card className={styles.card}>
-        <img src="/images/logoWom300.png" className={styles.logo} />
+        <img
+          src="/images/logoWom300.png"
+          className={styles.logo}
+          alt="czlonkowie WOM"
+        />
         <ul className={styles.links}>
           <li>
             <a href="https://www.facebook.com/Wiatr-od-Morza-105595471666611/">

@@ -94,7 +94,7 @@
     position: absolute;
     top: 0px;
     right: -1px;
-    height: calc(100% + 1px);
+    height: calc(100% + 2px);
     width: auto;
     z-index: 1;
   }

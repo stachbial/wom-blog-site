@@ -6,7 +6,13 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>wersja testowa / stowarzyszenie Wiatr od Morza &#174; / </p>
-      <a href="https://github.com/stachbial">Autor : S. BIAŁECKI</a>
+      <a
+        href="https://github.com/stachbial"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Autor : S. BIAŁECKI
+      </a>
     </footer>
   );
 };

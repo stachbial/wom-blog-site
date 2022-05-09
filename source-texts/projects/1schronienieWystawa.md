@@ -18,7 +18,7 @@ Start → 22 kwietnia, 19:00\
 Gdzie → ul. Morska, gdyński schron przeciwlotniczy z okresu II Wojny Światowej\
 Wejście → 10zł (środki zebrane z biletów zostaną przekazane na pomoc poszkodowanym w konflikcie w Ukrainie) <br /><br />
 Autorzy prac:\
-<a href='https://instagram.com/mjurkovski?utm_medium=copy_link'>Michał Jurkowski 📷</a> \
-<a href='https://instagram.com/eeerikos?utm_medium=copy_link'>Erik Reinvald 📷</a> \
+<a href="https://instagram.com/mjurkovski?utm_medium=copy_link" target="_blank" rel="noopener noreferrer">Michał Jurkowski 📷</a> \
+<a href="https://instagram.com/eeerikos?utm_medium=copy_link" target="_blank" rel="noopener noreferrer">Erik Reinvald 📷</a> \
 Czekamy na was →
-<a href='https://facebook.com/events/s/schronienie-wystawa-n1/275378951465744/'>Link do wydarzenia na facebook'u</a>
+<a href="https://facebook.com/events/s/schronienie-wystawa-n1/275378951465744/" target="_blank" rel="noopener noreferrer">Link do wydarzenia na facebook'u</a>

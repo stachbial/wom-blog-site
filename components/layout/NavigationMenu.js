@@ -45,6 +45,7 @@ const NavigationMenu = () => {
           )}
         </button>
       </div>
+      <div className={isMenuShown ? styles.backdropOn : styles.backdropOff} />
     </aside>
   );
 };

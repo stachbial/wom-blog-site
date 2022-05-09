@@ -60,7 +60,7 @@
 }
 
 /* for small mobile screen hights downsize the title */
-@media (max-width: 380px) and (max-height: 915px){
+@media (max-width: 380px) and (max-height: 915px) {
   .header h1 {
     font-size: 25px;
     letter-spacing: 2.5px;

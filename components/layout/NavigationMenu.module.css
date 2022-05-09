@@ -9,9 +9,10 @@
   left: 0px;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 9;
   transition: 0.4s ease;
 }
+
 .hide {
   top: calc(var(--menu-height-btnBar) - var(--menu-height));
 }
@@ -44,7 +45,7 @@
   letter-spacing: 0.2rem;
   text-decoration: none;
   text-transform: uppercase;
-  z-index: 2;
+  z-index: 10;
 }
 
 .waveBar {
@@ -62,7 +63,7 @@
   left: var(--menu-btn-gap);
   border: 0;
   padding: 0;
-  z-index: 3;
+  z-index: 10;
   cursor: pointer;
   transition: 0.4s ease;
   border-radius: 17%;
@@ -96,6 +97,25 @@
   transform: scaleX(1);
 }
 
+.backdropOff {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.backdropOn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  width: 100vw;
+  height: 100vh;
+}
+
 /* temporary for unfinished categories*/
 .disabled {
   color: rgb(139, 136, 136);
@@ -110,7 +130,7 @@
   letter-spacing: 0.2rem;
   text-decoration: line-through;
   text-transform: uppercase;
-  z-index: 2;
+  z-index: 10;
 }
 .disabled::before {
   position: absolute;

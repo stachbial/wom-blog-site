@@ -1,6 +1,7 @@
 .articleContent {
   padding: 1.5rem;
   padding-top: 0;
+  padding-top: 0;
   line-height: 1.5rem;
 }
 
@@ -12,6 +13,30 @@
     letter-spacing: 0.03rem;
     font-size: 18px;
   }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgContainer {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.wave {
+  position: absolute;
+  width: calc(100% + 2px);
+  height: auto;
+  left: -1px;
+  bottom: -1px;
+  transform: scaleY(-1);
 }
 
 /*========================= default styles from create-next-app =====================================*/

@@ -12,7 +12,7 @@ import DecorationHorizontalWave from "../../components/svgComponents/decoration/
 import DecorationVerticalWave from "../../components/svgComponents/decoration/articles/DecorationVerticalWave";
 import ImageSlider from "../../components/ImageSlider";
 
-import styles from "../../pageStyles/ProjectPage.module.css";
+import styles from "../../pageStyles/projekty/ProjectPage.module.css";
 
 export default function ProjectPage({ frontmatter, content, galleryData }) {
   return (

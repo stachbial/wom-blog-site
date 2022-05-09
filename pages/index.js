@@ -7,6 +7,7 @@ import { marked } from "marked";
 import PageContainer from "../components/layout/PageContainer";
 import Card from "../components/layout/utilities/Card";
 import Header from "../components/layout/utilities/Header";
+import DecorationHorizontalWave from "../components/svgComponents/decoration/articles/DecorationHorizontalWave";
 
 import styles from "../pageStyles/Home.module.css";
 
@@ -14,12 +15,15 @@ export default function Home({ frontmatter, content }) {
   return (
     <PageContainer>
       <Header>{frontmatter.title}</Header>
-      <Card>
-        <img
-          src={frontmatter.coverImage}
-          style={{ width: "100%" }}
-          alt="Zdjecie grupowe czlonkow stowarzyszenia"
-        />
+      <Card className={styles.card}>
+        <div className={styles.imgContainer}>
+          <img
+            src={frontmatter.coverImage}
+            style={{ width: "100%" }}
+            alt="Zdjecie grupowe czlonkow stowarzyszenia"
+          />
+          <DecorationHorizontalWave className={styles.wave} color="white" />
+        </div>
         <article
           className={styles.articleContent}
           dangerouslySetInnerHTML={{ __html: marked(content) }}

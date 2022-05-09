@@ -78,8 +78,6 @@
 
   .textContainer {
     margin: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     width: 50vw;
     height: 80vh;
   }
@@ -102,12 +100,16 @@
 @media (min-height: 650px) and (min-width: 1000px) and (orientation: landscape) {
   .textContainer {
     width: 45vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .article {
     font-size: 18px;
     padding-right: 2rem;
     line-height: 1.4rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 

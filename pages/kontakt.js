@@ -21,13 +21,21 @@ export default function ContactPage() {
         />
         <ul className={styles.links}>
           <li>
-            <a href="https://www.facebook.com/Wiatr-od-Morza-105595471666611/">
+            <a
+              href="https://www.facebook.com/Wiatr-od-Morza-105595471666611/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaceBookIcon dimensions={styles.icon} />
               <span className={styles.link}>Wiatr od Morza na Facebook'u</span>
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/wiatr.od.morza/?igshid=YmMyMTA2M2Y=&fbclid=IwAR2ehvVvsgVV_zsjVbDCrxQdWJiJCS1z45fBmjKGDS-OGshW08XBR71mye4">
+            <a
+              href="https://www.instagram.com/wiatr.od.morza/?igshid=YmMyMTA2M2Y=&fbclid=IwAR2ehvVvsgVV_zsjVbDCrxQdWJiJCS1z45fBmjKGDS-OGshW08XBR71mye4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <InstagramIcon dimensions={styles.icon} />
               <span className={styles.link}>
                 Wiatr od Morza na Instagram'ie

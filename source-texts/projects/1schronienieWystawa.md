@@ -1,6 +1,6 @@
 ---
 title: "SchronieNIE // Wystawa N1"
-excerpt: "Debiutancka wystawa z cyklu wystaw artystycznych SchronieNIE organizowanego przez stowarzyszenie Wiatr od Morza."
+excerpt: "Debiutancka wystawa z cyklu wystaw artystycznych SchronieNIE organizowanego przez stowarzyszenie WoM."
 coverImage: "/images/projects/schronienie/schronieniePreView.jpg"
 logo: "/images/projects/schronienie/schronienieLogo.jpg"
 key: "schronWys3"

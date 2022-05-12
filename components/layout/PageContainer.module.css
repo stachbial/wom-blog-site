@@ -1,9 +1,17 @@
 .pageContainer {
+  position: relative;
   height: 100%;
-  width: var(--page-content-width);
-  padding: 1rem;
+  width: 100%;
+  padding: 3rem;
   padding-top: var(--menu-height-btnBar);
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+@media (min-width: 1000px) {
+  .pageContainer {
+    margin-left: var(--menu-width);
+  }
 }

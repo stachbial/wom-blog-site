@@ -25,6 +25,38 @@
   --animation-horizontal: showup-horizontal;
 }
 
+/* mobile horizontal view */
+@media (max-height: 476px) {
+  :root {
+    --menu-btn-gap: 1rem;
+    --menu-height-btnBar: 4rem;
+    --menu-btn-size: 2rem;
+  }
+}
+
+@media (min-height: 700px) and (orientation: portrait) {
+  :root {
+    --menu-height: 65vh;
+  }
+}
+
+/* desktop view */
+@media (min-width: 1000px) and (orientation: landscape) {
+  :root {
+    --menu-height: 100vh;
+    --menu-width: 25vw;
+    --menu-height-btnBar: 1.4rem;
+    --page-content-font-size: 18px;
+    --page-h1-size: 30px;
+  }
+}
+
+@media (min-width: 2000px){
+  :root{
+    --menu-font-size: 30px;
+  }
+}
+
 @keyframes showup-vertical {
   /* used this for the animated elements: 
   opacity: 0;
@@ -49,34 +81,6 @@
     /* position: absolute; */
     transform: translateX(0);
     opacity: 100%;
-  }
-}
-
-/* mobile horizontal view */
-@media (max-height: 476px) {
-  :root {
-    --menu-btn-gap: 1rem;
-    --menu-height-btnBar: 4rem;
-    --menu-btn-size: 2rem;
-  }
-}
-
-@media (min-height: 700px) and (orientation: portrait) {
-  :root {
-    --menu-height: 65vh;
-  }
-}
-
-/* desktop view */
-@media (min-width: 1000px) and (orientation: landscape) {
-  :root {
-    --menu-height: 100vh;
-    --menu-width: 30%;
-    --menu-nav-width: 60%;
-    --menu-height-btnBar: 1.4rem;
-    --page-content-width: 80%;
-    --page-content-font-size: 18px;
-    --page-h1-size: 30px;
   }
 }
 

@@ -10,7 +10,6 @@ const Layout = ({ children }) => {
     <section className={styles.container}>
       <NavigationMenu />
       {children}
-      <DecorationLayoutWave translate={styles.rotate} color="black" />
     </section>
   );
 };

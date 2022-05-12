@@ -29,7 +29,7 @@ const NavigationMenu = () => {
         <p className={styles.disabled}>ARTYKUŁY</p>
         <Link href="/projekty">PROJEKTY</Link>
         <Link href="/kontakt">KONTAKT</Link>
-        <Link href="/">O NAS</Link>
+        <Link href="/">HOME</Link>
         <DecorationBGwave />
       </nav>
       <div className={styles.waveBar}>

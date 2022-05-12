@@ -21,7 +21,7 @@
   background-color: var(--menu-color);
   height: 100%;
   width: var(--menu-nav-width);
-  position: absolute;
+  position: relative;
   margin: 0;
   border: 0;
   padding-bottom: var(--menu-height-btnBar);
@@ -51,7 +51,8 @@
 .waveBar {
   position: relative;
   margin-left: -1px;
-  left: var(--menu-nav-width);
+  /* height: 100%; */
+  /* left: var(--menu-nav-width); */
 }
 
 .button {
@@ -190,31 +191,18 @@
 
 /* desktop */
 
-/* edge case when links stick out on hide bc of % menu width*/
-@media (min-width: 1000px) and (max-width: 1300px) and (orientation: landscape) {
-  .aside.hide a {
-    display: none;
-  }
-  /* for disabled */
-  .aside.hide p {
-    display: none;
-  }
-}
-
 @media (min-width: 1000px) and (orientation: landscape) {
   .aside {
     flex-direction: row;
     justify-content: flex-start;
-    max-width: 666px;
+    transition: none;
   }
   .hide {
     top: 0px;
-    left: calc(var(--menu-width) * -0.6);
   }
 
   .navigation {
-    min-height: 360px;
-    max-width: 400px;
+    min-height: 260px;
     padding-top: 50vh;
     display: flex;
     flex-direction: column;
@@ -224,9 +212,32 @@
     box-shadow: none;
   }
 
+  .backdropOn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
   .button {
-    position: absolute;
-    top: 2.5rem;
-    left: 1.5rem;
+    display: none;
+  }
+}
+
+@media (min-width: 2000px) {
+  .disabled {
+    line-height: 4rem;
+  }
+
+  .disabled::before {
+    font-size: 12px;
+    bottom: 20px;
+  }
+
+  .navigation a {
+    line-height: 4rem;
   }
 }

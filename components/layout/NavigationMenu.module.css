@@ -3,7 +3,6 @@
 .aside {
   height: var(--menu-height);
   width: var(--menu-width);
-  min-width: 240px;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -202,7 +201,7 @@
   }
 
   .navigation {
-    min-height: 260px;
+    /* min-height: 260px; */
     padding-top: 50vh;
     display: flex;
     flex-direction: column;

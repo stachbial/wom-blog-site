@@ -11,3 +11,8 @@
     height: 100vh;
   }
 }
+/* @media (min-width: 1200px) and (orientation: landscape) {
+  .SideWave {
+    /* width: auto; */
+  /* }
+} */ 

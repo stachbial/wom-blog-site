@@ -2,7 +2,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  padding: 3rem;
+  padding: 1rem;
   padding-top: var(--menu-height-btnBar);
   padding-bottom: 1rem;
   display: flex;
@@ -10,8 +10,11 @@
   justify-content: space-evenly;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (orientation: landscape) {
   .pageContainer {
     margin-left: var(--menu-width);
+    padding: 3rem;
+    padding-top: var(--menu-height-btnBar);
+    padding-bottom: 1rem;
   }
 }

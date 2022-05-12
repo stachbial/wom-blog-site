@@ -8,13 +8,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  /* wave width calculated from its aspect ratio */
+  --menu-wave-width: calc(100vh * 100 / 771);
 }
 
 @media (min-width: 1000px) and (orientation: landscape) {
   .pageContainer {
-    margin-left: var(--menu-width);
+    margin-left: calc(var(--menu-width) + var(--menu-wave-width));
     padding: 3rem;
     padding-top: var(--menu-height-btnBar);
     padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .pageContainer {
+    margin-left: calc(var(--menu-width));
   }
 }
